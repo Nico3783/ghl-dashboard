@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar-custom-menu active">
+        <div class="container-fluid">
+            <div id="navigation" class="active">
+                <ul class="navigation-menu">
+                    <li class="has-submenu active">
+                        <a href="/index">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_templates">
+                            <span>PDF Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_header_templates">
+                            <span>PDF Header Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_footer_templates">
+                            <span>PDF Footer Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/settings">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="page-content-tab">
+            <div class="container-fluid btm-p">
+
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="page-title-box">
+                            <div class="pl-4">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row text-center d-flex flex-justify-center">
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Offers Sent
+                            </div>
+                            <div class="card-body total_offers">
+                                <strong>6761</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-header">
+                                Hours Saved
+                            </div>
+                            <div class="card-body total_time_saved" data-time="0.2">
+                                <strong>1352.2</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row jd">
+                    <div class="col-md-12" id="kuch-unique">
+                        <input id="cal" class="form-control1" style="width:11%" type="text" value="01/22/2025 - 01/22/2025">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="datatable" class="table">
+                                        <thead class="thead-light">
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Phone</th>
+                                                <th>Offer Price</th>
+                                                <th>PDF Link</th>
+                                                <th>Status</th>
+                                                <th>Created At</th>
+                                                <th>Sent</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>71125</td>
+                                                <td>Katrina Rosendary</td>
+                                                <td>krosendary@bhsusa.com</td>
+                                                <td>+13052973077</td>
+                                                <td>$0.00</td>
+                                                <td><a href="#">View</a></td>
+                                                <td><span class="badge badge-soft-success">Email Sent</span></td>
+                                                <td>01-14-2025 04:50 PM</td>
+                                                <td>1 week ago</td>
+                                                <td><i class="fas fa-ellipsis-v"></i></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>

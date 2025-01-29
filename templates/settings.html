@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+
+<body>
+    <div class="navbar-custom-menu active">
+        <div class="container-fluid">
+            <div id="navigation" class="active">
+                <ul class="navigation-menu">
+                    <li class="has-submenu">
+                        <a href="/index">
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_templates">
+                            <span>PDF Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_header_templates">
+                            <span>PDF Header Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="/pdf_footer_templates">
+                            <span>PDF Footer Templates</span>
+                        </a>
+                    </li>
+                    <li class="has-submenu active">
+                        <a href="/settings">
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="page-wrapper">
+        <div class="page-content-tab">
+            <div class="container-fluid">
+                <div class="page-title-box">
+                    <h4>Settings</h4>
+                </div>
+
+                <div class="card">
+                    <div class="card-body">
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="settingsDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select Settings Category
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="settingsDropdown">
+                                <a class="dropdown-item" href="#general-settings">General Settings</a>
+                                <a class="dropdown-item" href="#email-settings">Email Settings</a>
+                                <a class="dropdown-item" href="#pdf-settings">PDF Settings</a>
+                            </div>
+                        </div>
+
+                        <div id="general-settings" class="settings-section">
+                            <h5>General Settings</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="email">Administrator Email</label>
+                                    <input type="email" id="email" class="form-control" placeholder="Enter admin email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date-format">Date Format</label>
+                                    <select id="date-format" class="form-control">
+                                        <option value="mm/dd/yyyy">MM/DD/YYYY</option>
+                                        <option value="dd/mm/yyyy">DD/MM/YYYY</option>
+                                        <option value="yyyy-mm-dd">YYYY-MM-DD</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="timezone">Timezone</label>
+                                    <select id="timezone" class="form-control">
+                                        <option value="UTC">UTC</option>
+                                        <option value="EST">EST</option>
+                                        <option value="PST">PST</option>
+                                        <option value="CST">CST</option>
+                                        <option value="MST">MST</option>
+                                    </select>
+                                </div>
+                                <button type="submit" class="btn btn-success">Save General Settings</button>
+                            </form>
+                        </div>
+
+                        <div id="email-settings" class="settings-section" style="margin-top: 20px;">
+                            <h5>Email Settings</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="smtp-server">SMTP Server</label>
+                                    <input type="text" id="smtp-server" class="form-control" placeholder="Enter SMTP server">
+                                </div>
+                                <div class="form-group">
+                                    <label for="smtp-port">SMTP Port</label>
+                                    <input type="number" id="smtp-port" class="form-control" placeholder="Enter SMTP port">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email-username">Email Username</label>
+                                    <input type="text" id="email-username" class="form-control" placeholder="Enter email username">
+                                </div>
+                                <button type="submit" class="btn btn-success">Save Email Settings</button>
+                            </form>
+                        </div>
+
+                        <div id="pdf-settings" class="settings-section" style="margin-top: 20px;">
+                            <h5>PDF Settings</h5>
+                            <form>
+                                <div class="form-group">
+                                    <label for="pdf-default-header">Default PDF Header</label>
+                                    <input type="text" id="pdf-default-header" class="form-control" placeholder="Enter default header text">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pdf-default-footer">Default PDF Footer</label>
+                                    <input type="text" id="pdf-default-footer" class="form-control" placeholder="Enter default footer text">
+                                </div>
+                                <button type="submit" class="btn btn-success">Save PDF Settings</button>
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="../static/js/script.js"></script>
+</body>
+
+</html>
