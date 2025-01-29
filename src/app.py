@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request, jsonify, send_from_directory
 import os
-from pdf_generator import generate_pdf
-from database import Database
+from .pdf_generator import generate_pdf
+from .database import Database
 
 app = Flask(
     __name__, 
